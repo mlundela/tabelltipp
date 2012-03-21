@@ -3,21 +3,32 @@
 
 
 #{ifErrors}
-<h1>Oops…</h1>
+<p class="error">Oops…</p>
 #{/ifErrors}
 
-#{form @Application.tipp()}
-Nave: <input type="text" name="bruker.navn" value=""/>
 
-<div class="demo">
+#{form @Application.tipp()}
+
+<div id="tabell" class="prepend-2 span-7">
     <ol id="sortable">
         #{list items:lag, as:'l'}
         <li class="ui-state-default" id="${l.id}">${l.navn}</li>
-        <input type="hidden" id="tips_${l_index}" name="bruker.tips[${l_index}].id" value="${l.id}"/>
+        <input type="hidden" id="tips_${l_index - 1}" name="tips[${l_index - 1}]" value="${l.id}"/>
         #{/list}
     </ol>
 </div>
 
+<div class="span-15 last">
 
-<input type="submit" value="Lagre"/>
+    Ditt navn <br/>
+    <input type="text" name="navn" value=""/>
+    <br/>
+    Epost <br/>
+    <input type="text" name="epost" value=""/>
+
+    <br/>
+    <br/>
+    <input type="submit" value="Lever dine tips!"/>
+</div>
+
 #{/form}

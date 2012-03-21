@@ -8,5 +8,5 @@ import javax.persistence.Entity;
 public class Lag extends Model {
 
   public String navn;
-  public Integer poeng = 0;
+  public int poeng;
 }

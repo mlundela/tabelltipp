@@ -46,6 +46,11 @@ Lag(vålerenga):
 Lag(ålesund):
   navn: Ålesund
 
+
 Bruker(henning):
   navn: Henning
-  tips: [brann, viking]
+
+TabellTips(t1):
+  bruker: henning
+  lag: brann
+  plassering: 1
