@@ -1,0 +1,7 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+#{list items:brukere, as:'bruker'}
+   <a href="@{Application.visBruker(bruker.id)}"><h3>${bruker.navn}</h3></a>
+#{/list}

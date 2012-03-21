@@ -20,6 +20,11 @@ public class Application extends Controller {
     render(bruker);
   }
 
+  public static void brukere() {
+    List<Bruker> brukere = Bruker.findAll();
+    render(brukere);
+  }
+
   public static void tipp(String navn, List<Long> tips) {
 
     Bruker bruker = new Bruker(navn);

@@ -47,10 +47,10 @@ Lag(ålesund):
   navn: Ålesund
 
 
-Bruker(henning):
-  navn: Henning
-
-TabellTips(t1):
-  bruker: henning
-  lag: brann
-  plassering: 1
+#Bruker(henning):
+#  navn: Henning
+#
+#TabellTips(t1):
+#  bruker: henning
+#  lag: brann
+#  plassering: 1

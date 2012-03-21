@@ -6,7 +6,9 @@ import play.test.Fixtures;
 public class Bootstrap extends Job {
 
   public void doJob() throws Exception {
-    Fixtures.deleteDatabase();
-    Fixtures.loadModels("data.yml");
+//    if (Lag.count() == 0) {
+      Fixtures.deleteDatabase();
+      Fixtures.loadModels("data.yml");
+//    }
   }
 }
