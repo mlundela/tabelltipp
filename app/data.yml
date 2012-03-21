@@ -1,0 +1,51 @@
+Lag(brann):
+  navn: Brann
+
+Lag(fredrikstad):
+  navn: Fredrikstad
+
+Lag(haugesund):
+  navn: Haugesund
+
+Lag(hønefoss):
+  navn: Hønefoss BK
+
+Lag(lillestrøm):
+  navn: Lillestrøm
+
+Lag(molde):
+  navn: Molde
+
+Lag(odd):
+  navn: Odd Grenland
+
+Lag(rosenborg):
+  navn: Rosenborg
+
+Lag(sandnes):
+  navn: Sandnes Ulf
+
+Lag(sogndal):
+  navn: Sogndal
+
+Lag(stabæk):
+  navn: Stabæk
+
+Lag(strømsgodset):
+  navn: Strømsgodset
+
+Lag(tromsø):
+  navn: Tromsø
+
+Lag(viking):
+  navn: Viking
+
+Lag(vålerenga):
+  navn: Vålerenga
+
+Lag(ålesund):
+  navn: Ålesund
+
+Bruker(henning):
+  navn: Henning
+  tips: [brann, viking]

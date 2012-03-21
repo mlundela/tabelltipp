@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+#{ifErrors}
+<h1>Oops…</h1>
+#{/ifErrors}
+
+#{form @Application.tipp()}
+Nave: <input type="text" name="bruker.navn" value=""/>
+
+<div class="demo">
+    <ol id="sortable">
+        #{list items:lag, as:'l'}
+        <li class="ui-state-default" id="${l.id}">${l.navn}</li>
+        <input type="hidden" id="tips_${l_index}" name="bruker.tips[${l_index}].id" value="${l.id}"/>
+        #{/list}
+    </ol>
+</div>
+
+
+<input type="submit" value="Lagre"/>
+#{/form}
