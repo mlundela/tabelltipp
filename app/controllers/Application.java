@@ -21,7 +21,7 @@ public class Application extends Controller {
   }
 
   public static void brukere() {
-    List<Bruker> brukere = Bruker.findAll();
+    List<Bruker> brukere = Bruker.getResultatliste();
     render(brukere);
   }
 

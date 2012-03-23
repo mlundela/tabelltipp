@@ -9,4 +9,6 @@ public class Lag extends Model {
 
   public String navn;
   public int poeng;
+  public int plassering;
+
 }

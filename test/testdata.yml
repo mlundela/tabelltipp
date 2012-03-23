@@ -1,0 +1,237 @@
+Lag(brann):
+  navn: Brann
+  poeng: 48
+
+Lag(fredrikstad):
+  navn: Fredrikstad
+  poeng: 36
+
+Lag(haugesund):
+  navn: Haugesund
+  poeng: 47
+
+Lag(hønefoss):
+  navn: Hønefoss BK
+  poeng: 21
+
+Lag(lillestrøm):
+  navn: Lillestrøm
+  poeng: 34
+
+Lag(molde):
+  navn: Molde
+  poeng: 58
+
+Lag(odd):
+  navn: Odd Grenland
+  poeng: 48
+
+Lag(rosenborg):
+  navn: Rosenborg
+  poeng: 49
+
+Lag(sandnes):
+  navn: Sandnes Ulf
+  poeng: 26
+
+Lag(sogndal):
+  navn: Sogndal
+  poeng: 34
+
+Lag(stabæk):
+  navn: Stabæk
+  poeng: 39
+
+Lag(strømsgodset):
+  navn: Strømsgodset
+  poeng: 45
+
+Lag(tromsø):
+  navn: Tromsø
+  poeng: 53
+
+Lag(viking):
+  navn: Viking
+  poeng: 37
+
+Lag(vålerenga):
+  navn: Vålerenga
+  poeng: 47
+
+Lag(ålesund):
+  navn: Ålesund
+  poeng: 43
+
+
+Bruker(henning):
+  navn: Henning
+
+Bruker(mads):
+  navn: Mads
+
+Bruker(nhat):
+  navn: Nhat
+
+
+TabellTips(t1):
+  bruker: henning
+  lag: rosenborg
+  plassering: 1
+
+TabellTips(t2):
+  bruker: henning
+  lag: molde
+  plassering: 2
+
+TabellTips(t3):
+  bruker: henning
+  lag: vålerenga
+  plassering: 3
+
+TabellTips(t4):
+  bruker: henning
+  lag: tromsø
+  plassering: 4
+
+TabellTips(t5):
+  bruker: henning
+  lag: viking
+  plassering: 5
+
+TabellTips(t6):
+  bruker: henning
+  lag: stabæk
+  plassering: 6
+
+TabellTips(t7):
+  bruker: henning
+  lag: lillestrøm
+  plassering: 7
+
+TabellTips(t8):
+  bruker: henning
+  lag: ålesund
+  plassering: 8
+
+TabellTips(t9):
+  bruker: henning
+  lag: brann
+  plassering: 9
+
+TabellTips(t10):
+  bruker: henning
+  lag: fredrikstad
+  plassering: 10
+
+TabellTips(t11):
+  bruker: henning
+  lag: strømsgodset
+  plassering: 11
+
+TabellTips(t12):
+  bruker: henning
+  lag: haugesund
+  plassering: 12
+
+TabellTips(t13):
+  bruker: henning
+  lag: sogndal
+  plassering: 13
+
+TabellTips(t14):
+  bruker: henning
+  lag: sandnes
+  plassering: 14
+
+TabellTips(t15):
+  bruker: henning
+  lag: odd
+  plassering: 15
+
+TabellTips(t16):
+  bruker: henning
+  lag: hønefoss
+  plassering: 16
+
+
+
+
+TabellTips(n1):
+  bruker: nhat
+  lag: rosenborg
+  plassering: 16
+
+TabellTips(n2):
+  bruker: nhat
+  lag: molde
+  plassering: 15
+
+TabellTips(n3):
+  bruker: nhat
+  lag: vålerenga
+  plassering: 14
+
+TabellTips(n4):
+  bruker: nhat
+  lag: tromsø
+  plassering: 13
+
+TabellTips(n5):
+  bruker: nhat
+  lag: viking
+  plassering: 12
+
+TabellTips(n6):
+  bruker: nhat
+  lag: stabæk
+  plassering: 11
+
+TabellTips(n7):
+  bruker: nhat
+  lag: lillestrøm
+  plassering: 10
+
+TabellTips(n8):
+  bruker: nhat
+  lag: ålesund
+  plassering: 9
+
+TabellTips(n9):
+  bruker: nhat
+  lag: brann
+  plassering: 8
+
+TabellTips(n10):
+  bruker: nhat
+  lag: fredrikstad
+  plassering: 7
+
+TabellTips(n11):
+  bruker: nhat
+  lag: strømsgodset
+  plassering: 6
+
+TabellTips(n12):
+  bruker: nhat
+  lag: haugesund
+  plassering: 5
+
+TabellTips(n13):
+  bruker: nhat
+  lag: sogndal
+  plassering: 4
+
+TabellTips(n14):
+  bruker: nhat
+  lag: sandnes
+  plassering: 3
+
+TabellTips(n15):
+  bruker: nhat
+  lag: odd
+  plassering: 2
+
+TabellTips(n16):
+  bruker: nhat
+  lag: hønefoss
+  plassering: 1

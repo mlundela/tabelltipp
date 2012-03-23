@@ -1,3 +1,4 @@
+import models.Lag;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
 import play.test.Fixtures;
@@ -6,9 +7,9 @@ import play.test.Fixtures;
 public class Bootstrap extends Job {
 
   public void doJob() throws Exception {
-//    if (Lag.count() == 0) {
+    if (Lag.count() == 0) {
       Fixtures.deleteDatabase();
       Fixtures.loadModels("data.yml");
-//    }
+    }
   }
 }
