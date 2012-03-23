@@ -12,7 +12,8 @@ public class Application extends Controller {
 
   public static void index() {
     List<Lag> lag = Lag.findAll();
-    render(lag);
+    List<Bruker> brukere = Bruker.getResultatliste();
+    render(lag, brukere);
   }
 
   public static void visBruker(Long id) {
