@@ -37,12 +37,12 @@ public class Bruker extends Model implements Comparable<Bruker> {
   public int getScore() {
     List<Lag> tabell = getTabell();
     List<TabellTips> tips = getTips();
-    int score = 100;
+    int trekk = 0;
     for (TabellTips tip : tips) {
       Lag fasit = tabell.get(tip.plassering - 1);
-      score -= Math.abs(fasit.poeng - tip.lag.poeng);
+      trekk += Math.abs(fasit.poeng - tip.lag.poeng);
     }
-    return score;
+    return 100 - trekk / 2;
   }
 
   public static List<Bruker> getResultatliste() {
