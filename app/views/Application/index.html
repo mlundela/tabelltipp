@@ -21,12 +21,23 @@
 
 <div class="span-12 last">
 
-    <div id="tabell">
-        <ol>
-            #{list items:tabell, as:'lag'}
-            <li class="ui-state-default">${lag.navn}</li>
-            #{/list}
-        </ol>
-    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th width="30px">Plassering</th>
+            <th>Lag</th>
+            <th>Poeng</th>
+        </tr>
+        </thead>
+        #{list items:tabell, as:'lag'}
+        <tr>
+            <td>${lag.plassering}</td>
+            <td>${lag.navn}</td>
+            <td>${lag.poeng}</td>
+        </tr>
+        #{/list}
+
+    </table>
 
 </div>
