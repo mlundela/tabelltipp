@@ -24,7 +24,7 @@
         <thead>
         <tr>
             <th>${bruker.navn}'s tips</th>
-            <th>Fasit</th>
+            <th colspan="2">Fasit</th>
             <th>Minuspoeng</th>
         </tr>
         </thead>
@@ -32,6 +32,7 @@
         <tr>
             <td>${t.tips.lag.navn}</td>
             <td>${t.fasit.navn}</td>
+            <td>${t.fasit.poeng}</td>
             <td>${t.score}</td>
         </tr>
         #{/list}
