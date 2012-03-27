@@ -10,7 +10,7 @@
         </tr>
         </thead>
         #{list items:brukere, as:'b'}
-        <tr class="${b == bruker ? 'active' : ''}">
+        <tr class="${b.id == bruker.id ? 'active' : ''}">
             <td><a href="@{Application.visBruker(b.id)}">${b.navn}</a></td>
             <td>${b.score}</td>
         </tr>
