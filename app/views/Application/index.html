@@ -19,20 +19,16 @@
     </table>
 </div>
 
-<div class="span-12 last">
-
-
+<div class="prepend-1 span-12 last">
     <table>
         <thead>
         <tr>
-            <th width="30px">Plassering</th>
             <th>Lag</th>
             <th>Poeng</th>
         </tr>
         </thead>
         #{list items:tabell, as:'lag'}
         <tr>
-            <td>${lag.plassering}</td>
             <td>${lag.navn}</td>
             <td>${lag.poeng}</td>
         </tr>
