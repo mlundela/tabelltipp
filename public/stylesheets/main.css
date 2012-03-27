@@ -18,13 +18,14 @@ input[type=text] {
 }
 
 body {
-    /*background-color: #ff9999;*/
+    background-color: #fafafa;
 }
 
 tr.active td {
-    background-color: #fafad2;
+    background-color: #ccffcc;
 }
 
 a {
     text-decoration: none;
+    color: #339900;
 }
