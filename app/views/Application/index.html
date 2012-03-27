@@ -1,19 +1,32 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
+<div class="span-12">
+    <table>
+        <thead>
+        <tr>
+            <th width="200px">Bruker</th>
+            <th>Poeng</th>
+        </tr>
+        </thead>
+        #{list items:brukere, as:'bruker'}
+        <tr>
+            <td><a href="@{Application.visBruker(bruker.id)}">${bruker.navn}</a></td>
+            <td>${bruker.score}</td>
+        </tr>
+        #{/list}
 
-<table>
-    <thead>
-    <tr>
-        <th width="200px">Bruker</th>
-        <th>Poeng</th>
-    </tr>
-    </thead>
-    #{list items:brukere, as:'bruker'}
-    <tr>
-        <td><a href="@{Application.visBruker(bruker.id)}">${bruker.navn}</a></td>
-        <td>${bruker.score}</td>
-    </tr>
-    #{/list}
+    </table>
+</div>
 
-</table>
+<div class="span-12 last">
+
+    <div id="tabell">
+        <ol>
+            #{list items:tabell, as:'lag'}
+            <li class="ui-state-default">${lag.navn}</li>
+            #{/list}
+        </ol>
+    </div>
+
+</div>

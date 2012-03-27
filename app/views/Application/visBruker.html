@@ -6,8 +6,8 @@
 
 <div id="tabell">
     <ol>
-        #{list items:bruker.tabellTips, as:'l'}
-        <li class="ui-state-default">${l.navn}</li>
+        #{list items:bruker.tips, as:'tip'}
+        <li class="ui-state-default">${tip.lag.navn}</li>
         #{/list}
     </ol>
 </div>

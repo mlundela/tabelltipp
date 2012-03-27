@@ -12,7 +12,8 @@ public class Application extends Controller {
 
   public static void index() {
     List<Bruker> brukere = Bruker.getResultatliste();
-    render(brukere);
+    List<Lag> tabell = Lag.getTabell();
+    render(brukere, tabell);
   }
 
   public static void visBruker(Long id) {
