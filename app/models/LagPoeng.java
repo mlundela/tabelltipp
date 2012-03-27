@@ -10,8 +10,8 @@ public class LagPoeng {
     this.tips = tips;
   }
 
-  public int getScore() {
-    return Math.abs(fasit.poeng - tips.lag.poeng);
+  public float getScore() {
+    return (float) (Math.abs(fasit.poeng - tips.lag.poeng) *-0.5);
   }
 
 }
