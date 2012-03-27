@@ -3,6 +3,7 @@ package models;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -30,6 +31,16 @@ public class Bruker extends Model implements Comparable<Bruker> {
       trekk += Math.abs(fasit.poeng - tip.lag.poeng);
     }
     return 100 - trekk / 2;
+  }
+
+  public List<LagPoeng> getTabellPoeng() {
+    List<LagPoeng> out = new ArrayList<LagPoeng>();
+    List<Lag> tabell = Lag.getTabell();
+    List<TabellTips> tips = getTips();
+    for (TabellTips tip : tips) {
+      out.add(new LagPoeng(tabell.get(tip.plassering - 1), tip));
+    }
+    return out;
   }
 
   public static List<Bruker> getResultatliste() {

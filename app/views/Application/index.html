@@ -1,7 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<div class="span-12">
+<div class="span-10">
     <table>
         <thead>
         <tr>
@@ -19,16 +19,18 @@
     </table>
 </div>
 
-<div class="prepend-1 span-11 last">
+<div class="prepend-1 span-13 last">
     <table>
         <thead>
         <tr>
-            <th>Lag</th>
+            <th>tips</th>
+            <th>Fasit</th>
             <th>Poeng</th>
         </tr>
         </thead>
         #{list items:tabell, as:'lag'}
         <tr>
+            <td>${lag.navn}</td>
             <td>${lag.navn}</td>
             <td>${lag.poeng}</td>
         </tr>

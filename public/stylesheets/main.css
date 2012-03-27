@@ -16,3 +16,7 @@ input[type=text] {
     height: 24px;
     width: 240px;
 }
+
+body {
+    /*background-color: #ff9999;*/
+}

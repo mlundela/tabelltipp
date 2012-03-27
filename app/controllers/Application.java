@@ -17,8 +17,10 @@ public class Application extends Controller {
   }
 
   public static void visBruker(Long id) {
+    List<Bruker> brukere = Bruker.getResultatliste();
+    List<Lag> tabell = Lag.getTabell();
     Bruker bruker = Bruker.findById(id);
-    render(bruker);
+    render(bruker, brukere, tabell);
   }
 
   public static void brukere() {

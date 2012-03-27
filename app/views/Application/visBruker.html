@@ -1,13 +1,41 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<h3>${bruker.navn} sine tips</h3>
-
-
-<div id="tabell">
-    <ol>
-        #{list items:bruker.tips, as:'tip'}
-        <li class="ui-state-default">${tip.lag.navn}</li>
+<div class="span-10">
+    <table>
+        <thead>
+        <tr>
+            <th width="200px">Bruker</th>
+            <th>Poeng</th>
+        </tr>
+        </thead>
+        #{list items:brukere, as:'b'}
+        <tr>
+            <td><a href="@{Application.visBruker(b.id)}">${b.navn}</a></td>
+            <td>${b.score}</td>
+        </tr>
         #{/list}
-    </ol>
+
+    </table>
+</div>
+
+<div class="prepend-1 span-13 last">
+    <table>
+        <thead>
+        <tr>
+            <th>Tips</th>
+            <th>Fasit</th>
+            <th>Minuspoeng</th>
+        </tr>
+        </thead>
+        #{list items:bruker.tabellPoeng, as:'t'}
+        <tr>
+            <td>${t.tips.lag.navn}</td>
+            <td>${t.fasit.navn}</td>
+            <td>${t.score}</td>
+        </tr>
+        #{/list}
+
+    </table>
+
 </div>
