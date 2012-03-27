@@ -6,11 +6,11 @@
         <thead>
         <tr>
             <th width="200px">Bruker</th>
-            <th>Poeng</th>
+            <th>Poengsum</th>
         </tr>
         </thead>
         #{list items:brukere, as:'b'}
-        <tr>
+        <tr class="${b == bruker ? 'active' : ''}">
             <td><a href="@{Application.visBruker(b.id)}">${b.navn}</a></td>
             <td>${b.score}</td>
         </tr>
@@ -23,7 +23,7 @@
     <table>
         <thead>
         <tr>
-            <th>Tips</th>
+            <th>${bruker.navn}'s tips</th>
             <th>Fasit</th>
             <th>Minuspoeng</th>
         </tr>
@@ -38,6 +38,6 @@
 
     </table>
 
-    <p class="small">* Formel for poeng er: Sum = 100 - (minuspoeng) / 2</p>
+    <p class="small">* Poengsum = 100 - minuspoeng / 2</p>
 
 </div>

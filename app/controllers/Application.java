@@ -11,9 +11,8 @@ import java.util.List;
 public class Application extends Controller {
 
   public static void index() {
-    List<Bruker> brukere = Bruker.getResultatliste();
-    List<Lag> tabell = Lag.getTabell();
-    render(brukere, tabell);
+    Long id = Bruker.getResultatliste().get(0).id;
+    visBruker(id);
   }
 
   public static void visBruker(Long id) {
