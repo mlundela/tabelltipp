@@ -22,6 +22,20 @@ public class Application extends Controller {
     render(bruker, brukere, tabell);
   }
 
+  public static void tabell() {
+    List<Lag> tabell = Lag.getTabell();
+    render(tabell);
+  }
+
+  public static void lagreTabell(List<Lag> tabell) {
+    for (Lag lag : tabell) {
+      Lag l = Lag.findById(lag.id);
+      l.poeng = lag.poeng;
+      l.save();
+    }
+    tabell();
+  }
+
   public static void brukere() {
     List<Bruker> brukere = Bruker.getResultatliste();
     render(brukere);

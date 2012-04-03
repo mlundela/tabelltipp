@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                                       Application.index
+GET     /tabell                                 Application.tabell
 GET     /{id}                                   Application.visBruker
 
 # Ignore favicon requests
