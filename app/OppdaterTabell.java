@@ -6,8 +6,9 @@ import org.jsoup.select.Elements;
 import play.Logger;
 import play.jobs.Every;
 import play.jobs.Job;
+import play.jobs.On;
 
-@Every("1min")
+@On("0 0 18,20,22 * * ?")
 public class OppdaterTabell extends Job {
 
   public void doJob() throws Exception {
