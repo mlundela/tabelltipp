@@ -15,6 +15,7 @@ public class OppdaterTabell extends Job {
     Logger.info("Oppdaterer tabell");
     Document doc = Jsoup.connect("http://www.altomfotball.no/element.do?cmd=tournamentTable&tournamentId=1").get();
     Elements elements = doc.select(".sd_table_team a");
+    int i = 1;
 
     for (Element element : elements) {
       String points = element.parent().parent().select(".sd_table_points").text();
@@ -42,6 +43,7 @@ public class OppdaterTabell extends Job {
 
       Lag lag = Lag.find("navn = ?", name).first();
       lag.poeng = Integer.valueOf(points);
+      lag.plassering = i++;
       lag.save();
     }
   }

@@ -13,6 +13,6 @@ public class Lag extends Model {
   public int plassering;
 
   public static List<Lag> getTabell() {
-    return Lag.find("order by poeng desc").fetch();
+    return Lag.find("order by plassering asc").fetch();
   }
 }
