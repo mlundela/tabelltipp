@@ -7,7 +7,7 @@ import play.Logger;
 import play.jobs.Every;
 import play.jobs.Job;
 
-@Every("1h")
+@Every("1min")
 public class OppdaterTabell extends Job {
 
   public void doJob() throws Exception {
