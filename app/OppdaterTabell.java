@@ -8,7 +8,7 @@ import play.jobs.Every;
 import play.jobs.Job;
 import play.jobs.On;
 
-@On("0 0 18,20,22 * * ?")
+@On("0 */5 14-20 0,1,5,6 * ?")
 public class OppdaterTabell extends Job {
 
   public void doJob() throws Exception {
