@@ -49,12 +49,15 @@ Lag(ålesund):
 
 Bruker(henning):
   navn: Henning
+  epost: hlo@gmail.com
 
 Bruker(mads):
   navn: Mads
+  epost: mlu@gmail.com
 
 Bruker(nhat):
   navn: Nhat
+  epost: nhat@gmail.com
 
 Tips(t1):
   bruker: henning
