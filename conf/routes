@@ -4,8 +4,6 @@
 
 # Home page
 GET     /                                       Application.index
-GET     /tabell                                 Application.tabell
-GET     /{id}                                   Application.visBruker
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

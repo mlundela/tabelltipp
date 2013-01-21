@@ -1,15 +1,14 @@
 package controllers;
 
-import models.Bruker;
-import models.Lag;
-import models.TabellTips;
-import play.Logger;
 import play.mvc.Controller;
-
-import java.util.List;
 
 public class Application extends Controller {
 
+  public static void index() {
+    renderText("Hello world");
+  }
+
+  /*
   public static void index() {
     Long id = Bruker.getResultatliste().get(0).id;
     visBruker(id);
@@ -49,11 +48,12 @@ public class Application extends Controller {
     int plassering = 1;
     for (Long lagId : tips) {
       Logger.info("Bruker: %s, lagId: %s, posisjon: %s", bruker.navn, lagId, plassering);
-      TabellTips t = new TabellTips(bruker, (Lag) Lag.findById(lagId), plassering++);
+      Tips t = new Tips(bruker, (Lag) Lag.findById(lagId), plassering++);
       t.save();
     }
 
     visBruker(bruker.id);
   }
+  */
 
 }

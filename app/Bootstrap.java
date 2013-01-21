@@ -11,7 +11,7 @@ public class Bootstrap extends Job {
     if (Lag.count() == 0) {
       Logger.info("INIT DATABASE");
       Fixtures.deleteDatabase();
-      Fixtures.loadModels("testdata.yml");
+//      Fixtures.loadModels("testdata.yml");
     }
   }
 }
