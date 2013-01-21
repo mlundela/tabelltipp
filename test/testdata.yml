@@ -1,8 +1,8 @@
 Lag(brann):
   navn: Brann
 
-Lag(fredrikstad):
-  navn: Fredrikstad
+Lag(start):
+  navn: Start
 
 Lag(haugesund):
   navn: Haugesund
@@ -28,8 +28,8 @@ Lag(sandnes):
 Lag(sogndal):
   navn: Sogndal
 
-Lag(stabæk):
-  navn: Stabæk
+Lag(sarp):
+  navn: Sarpsborg 08
 
 Lag(strømsgodset):
   navn: Strømsgodset
@@ -62,7 +62,7 @@ Bruker(nhat):
 Tips(t1):
   bruker: henning
   p1: brann
-  p2: fredrikstad
+  p2: start
   p3: haugesund
   p4: lillestrøm
   p5: molde
@@ -70,7 +70,7 @@ Tips(t1):
   p7: rosenborg
   p8: sandnes
   p9: sogndal
-  p10: stabæk
+  p10: sarp
   p11: strømsgodset
   p12: tromsø
   p13: viking
@@ -80,7 +80,7 @@ Tips(t1):
 
 Tips(t2):
   bruker: mads
-  p1: fredrikstad
+  p1: start
   p2: brann
   p3: lillestrøm
   p4: haugesund
@@ -89,7 +89,7 @@ Tips(t2):
   p7: rosenborg
   p8: sandnes
   p9: sogndal
-  p10: stabæk
+  p10: sarp
   p11: strømsgodset
   p12: tromsø
   p13: viking
@@ -100,7 +100,7 @@ Tips(t2):
 Tips(t3):
   bruker: nhat
   p1: brann
-  p2: fredrikstad
+  p2: start
   p3: haugesund
   p4: lillestrøm
   p5: odd
@@ -108,10 +108,14 @@ Tips(t3):
   p7: sandnes
   p8: rosenborg
   p9: sogndal
-  p10: stabæk
+  p10: sarp
   p11: strømsgodset
   p12: tromsø
   p13: viking
   p14: vålerenga
   p15: ålesund
   p16: hønefoss
+
+Runde(runde1):
+  nummer: 1
+  dato: 01/03/2013

@@ -5,6 +5,7 @@ import play.db.jpa.Model;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -13,4 +14,8 @@ public class Runde extends Model {
   public int nummer;
   public Date dato;
 
+  public static Runde sisteRunde() {
+    List<Runde> fetch = Runde.find("order by runde desc").fetch(1);
+    return fetch.get(0);
+  }
 }
