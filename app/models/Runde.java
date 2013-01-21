@@ -15,7 +15,6 @@ public class Runde extends Model {
   public Date dato;
 
   public static Runde sisteRunde() {
-    List<Runde> fetch = Runde.find("order by runde desc").fetch(1);
-    return fetch.get(0);
+    return Runde.find("order by nummer desc").first();
   }
 }

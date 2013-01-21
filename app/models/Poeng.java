@@ -14,5 +14,6 @@ public class Poeng extends Model {
   @ManyToOne
   public Lag lag;
 
-  int poeng;
+  public int poeng;
+
 }
