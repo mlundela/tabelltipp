@@ -1,66 +1,56 @@
-Lag(brann):
-  navn: Brann
+Team(brann):
+  name: Brann
 
-Lag(start):
-  navn: Start
+Team(start):
+  name: Start
 
-Lag(haugesund):
-  navn: Haugesund
+Team(haugesund):
+  name: Haugesund
 
-Lag(hønefoss):
-  navn: Hønefoss
+Team(hønefoss):
+  name: Hønefoss
 
-Lag(lillestrøm):
-  navn: Lillestrøm
+Team(lillestrøm):
+  name: Lillestrøm
 
-Lag(molde):
-  navn: Molde
+Team(molde):
+  name: Molde
 
-Lag(odd):
-  navn: Odd Grenland
+Team(odd):
+  name: Odd Grenland
 
-Lag(rosenborg):
-  navn: Rosenborg
+Team(rosenborg):
+  name: Rosenborg
 
-Lag(sandnes):
-  navn: Sandnes Ulf
+Team(sandnes):
+  name: Sandnes Ulf
 
-Lag(sogndal):
-  navn: Sogndal
+Team(sogndal):
+  name: Sogndal
 
-Lag(sarp):
-  navn: Sarpsborg 08
+Team(sarp):
+  name: Sarpsborg 08
 
-Lag(strømsgodset):
-  navn: Strømsgodset
+Team(strømsgodset):
+  name: Strømsgodset
 
-Lag(tromsø):
-  navn: Tromsø
+Team(tromsø):
+  name: Tromsø
 
-Lag(viking):
-  navn: Viking
+Team(viking):
+  name: Viking
 
-Lag(vålerenga):
-  navn: Vålerenga
+Team(vålerenga):
+  name: Vålerenga
 
-Lag(ålesund):
-  navn: Aalesund
+Team(ålesund):
+  name: Aalesund
 
 
-Bruker(henning):
-  navn: Henning
-  epost: hlo@gmail.com
-
-Bruker(mads):
-  navn: Mads
-  epost: mlu@gmail.com
-
-Bruker(nhat):
-  navn: Nhat
-  epost: nhat@gmail.com
-
-Tips(t1):
-  bruker: henning
+Bet(t1):
+  user:
+    name: Mads
+    email: mlu@gmail.com
   p1: brann
   p2: start
   p3: haugesund
@@ -78,8 +68,10 @@ Tips(t1):
   p15: ålesund
   p16: hønefoss
 
-Tips(t2):
-  bruker: mads
+Bet(t2):
+  user:
+    name: Nhat
+    email: nhat@gmail.com
   p1: start
   p2: brann
   p3: lillestrøm
@@ -97,8 +89,10 @@ Tips(t2):
   p15: ålesund
   p16: hønefoss
 
-Tips(t3):
-  bruker: nhat
+Bet(t3):
+  user:
+    name: Henning
+    email: hlo@gmail.com
   p1: brann
   p2: start
   p3: haugesund
@@ -115,10 +109,4 @@ Tips(t3):
   p14: vålerenga
   p15: ålesund
   p16: hønefoss
-
-Runde(runde1):
-  nummer: 1
-  dato: 01/03/2013
-
-Poeng(p1):
 

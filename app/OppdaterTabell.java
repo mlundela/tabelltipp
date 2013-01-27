@@ -1,6 +1,3 @@
-import models.Lag;
-import models.Poeng;
-import models.Runde;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,8 +15,6 @@ public class OppdaterTabell extends Job {
     Document doc = Jsoup.connect("http://www.altomfotball.no/element.do?cmd=tournamentTable&tournamentId=1").get();
     Elements elements = doc.select(".sd_table_team a");
 //    int i = 1;
-
-    Runde runde = Runde.sisteRunde();
 
     for (Element element : elements) {
       String points = element.parent().parent().select(".sd_table_points").text();
@@ -47,10 +42,10 @@ public class OppdaterTabell extends Job {
         case 541: name = "Sarpsborg 08"; break;
       }
 
-//      Lag lag = Lag.find("navn = ?", name).first();
-      Poeng poeng = Poeng.find("runde = ? and lag.navn = ?", runde, name).first();
-      poeng.poeng = Integer.valueOf(points);
-      poeng.save();
+//      Lag lag = Lag.find("name = ?", name).first();
+//      Poeng poeng = Poeng.find("runde = ? and lag.name = ?", runde, name).first();
+//      poeng.poeng = Integer.valueOf(points);
+//      poeng.save();
 
       Logger.info(name + " har " + points + " poeng");
     }

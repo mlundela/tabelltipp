@@ -1,11 +1,30 @@
 package controllers;
 
+import models.Bet;
+import models.User;
+import play.data.validation.Valid;
 import play.mvc.Controller;
 
 public class Application extends Controller {
 
   public static void index() {
     renderText("Hello world");
+  }
+
+  public static void newBet(){
+    Bet bet = new Bet();
+    bet.init();
+    render(bet);
+  }
+
+
+  public static void createBet(@Valid Bet bet) {
+    User user = User.find("email = ?", bet.user.email).first();
+    if (user != null) {
+      bet.user = user;
+    }
+    bet.save();
+    newBet();
   }
 
   /*
@@ -40,14 +59,14 @@ public class Application extends Controller {
     render(brukere);
   }
 
-  public static void lagreTips(String navn, List<Long> tips) {
+  public static void lagreTips(String name, List<Long> tips) {
 
-    Bruker bruker = new Bruker(navn);
+    Bruker bruker = new Bruker(name);
     bruker.save();
 
     int plassering = 1;
     for (Long lagId : tips) {
-      Logger.info("Bruker: %s, lagId: %s, posisjon: %s", bruker.navn, lagId, plassering);
+      Logger.info("Bruker: %s, lagId: %s, posisjon: %s", bruker.name, lagId, plassering);
       Tips t = new Tips(bruker, (Lag) Lag.findById(lagId), plassering++);
       t.save();
     }

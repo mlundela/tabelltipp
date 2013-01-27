@@ -1,21 +1,24 @@
 package models;
 
+import play.data.validation.Email;
+import play.data.validation.Unique;
 import play.db.jpa.Model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 
-@Entity
-public class Bruker extends Model implements Comparable<Bruker> {
+@Entity(name = "usr")
+public class User extends Model implements Comparable<User> {
 
-  public String navn;
-  public String epost;
+  public String name;
 
-//  public Bruker(String navn) {
-//    this.navn = navn;
+  @Column(unique = true)
+  @Email
+  public String email;
+
+//  public Bruker(String name) {
+//    this.name = name;
 //  }
 //
 //  public List<TabellTips> getTips() {
@@ -50,7 +53,7 @@ public class Bruker extends Model implements Comparable<Bruker> {
 //    return brukere;
 //  }
 
-  public int compareTo(Bruker bruker) {
-    return bruker.getScore() - this.getScore();
+  public int compareTo(User user) {
+    return user.getScore() - this.getScore();
   }
 }

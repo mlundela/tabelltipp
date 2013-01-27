@@ -31,7 +31,7 @@ public class OppdaterTabellTest extends UnitTest {
 //        case 312: name = "Stabæk"; break;
 //      }
 //
-//      Lag lag = Lag.find("navn = ?", name).first();
+//      Lag lag = Lag.find("name = ?", name).first();
 //      lag.poeng = Integer.valueOf(points);
 //      lag.save();
 //    }

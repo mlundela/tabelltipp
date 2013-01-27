@@ -1,11 +1,7 @@
-import models.Bruker;
-import models.Lag;
-import models.Tips;
-import org.junit.Test;
+import models.Bet;
+import models.User;
 import play.test.Fixtures;
 import play.test.UnitTest;
-
-import java.util.List;
 
 public class BasicTest extends UnitTest {
 
@@ -56,9 +52,9 @@ public class BasicTest extends UnitTest {
     Fixtures.deleteDatabase();
     Fixtures.loadModels("testdata.yml");
 
-    Bruker henning = Bruker.find("navn = ?", "Henning").first();
-    Bruker nhat = Bruker.find("navn = ?", "Nhat").first();
-    assertEquals(32, Tips.all().fetch().size());
+    User henning = User.find("name = ?", "Henning").first();
+    User nhat = User.find("name = ?", "Nhat").first();
+    assertEquals(32, Bet.all().fetch().size());
     assertEquals(-12, henning.getScore());
     assertEquals(-96, nhat.getScore());
   }
