@@ -4,7 +4,8 @@ $(function() {
         placeholder: "ui-state-highlight",
         update: function(event, ui) {
             $('li').each(function(index, value) {
-                $('#tips_' + index).val($(this).attr('id'));
+                $('#bet_p' + (index + 1)).val($(this).attr('id'));
+                console.log("bet_p"+ (index + 1) + " = " + $(this).attr('id'))
             });
         }
     });

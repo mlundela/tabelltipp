@@ -1,5 +1,6 @@
 package models;
 
+import net.sf.oval.constraint.NotEmpty;
 import play.data.validation.Email;
 import play.data.validation.Unique;
 import play.db.jpa.Model;
@@ -11,8 +12,10 @@ import javax.persistence.Entity;
 @Entity(name = "usr")
 public class User extends Model implements Comparable<User> {
 
+  @NotEmpty
   public String name;
 
+  @NotEmpty
   @Column(unique = true)
   @Email
   public String email;
