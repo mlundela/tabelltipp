@@ -1,0 +1,112 @@
+eam(brann):
+  name: Brann
+
+Team(start):
+  name: Start
+
+Team(haugesund):
+  name: Haugesund
+
+Team(hønefoss):
+  name: Hønefoss
+
+Team(lillestrøm):
+  name: Lillestrøm
+
+Team(molde):
+  name: Molde
+
+Team(odd):
+  name: Odd Grenland
+
+Team(rosenborg):
+  name: Rosenborg
+
+Team(sandnes):
+  name: Sandnes Ulf
+
+Team(sogndal):
+  name: Sogndal
+
+Team(sarp):
+  name: Sarpsborg 08
+
+Team(strømsgodset):
+  name: Strømsgodset
+
+Team(tromsø):
+  name: Tromsø
+
+Team(viking):
+  name: Viking
+
+Team(vålerenga):
+  name: Vålerenga
+
+Team(ålesund):
+  name: Aalesund
+
+
+Bet(t1):
+  user:
+    name: Mads
+    email: mlu@gmail.com
+  p1: brann
+  p2: start
+  p3: haugesund
+  p4: lillestrøm
+  p5: molde
+  p6: odd
+  p7: rosenborg
+  p8: sandnes
+  p9: sogndal
+  p10: sarp
+  p11: strømsgodset
+  p12: tromsø
+  p13: viking
+  p14: vålerenga
+  p15: ålesund
+  p16: hønefoss
+
+Bet(t2):
+  user:
+    name: Nhat
+    email: nhat@gmail.com
+  p1: start
+  p2: brann
+  p3: lillestrøm
+  p4: haugesund
+  p5: molde
+  p6: odd
+  p7: rosenborg
+  p8: sandnes
+  p9: sogndal
+  p10: sarp
+  p11: strømsgodset
+  p12: tromsø
+  p13: viking
+  p14: vålerenga
+  p15: ålesund
+  p16: hønefoss
+
+Bet(t3):
+  user:
+    name: Henning
+    email: hlo@gmail.com
+  p1: brann
+  p2: start
+  p3: haugesund
+  p4: lillestrøm
+  p5: odd
+  p6: molde
+  p7: sandnes
+  p8: rosenborg
+  p9: sogndal
+  p10: sarp
+  p11: strømsgodset
+  p12: tromsø
+  p13: viking
+  p14: vålerenga
+  p15: ålesund
+  p16: hønefoss
+
