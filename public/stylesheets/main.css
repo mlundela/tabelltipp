@@ -1,11 +1,11 @@
-#tabell ul {
+#tabell > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
 }
 
-#tabell li {
+#tabell ul li {
     margin: 5px;
     padding: 5px;
     width: 150px;
@@ -21,11 +21,3 @@ body {
     background-color: #fafafa;
 }
 
-tr.active td {
-    background-color: #ccffcc;
-}
-
-a {
-    text-decoration: none;
-    color: #339900;
-}

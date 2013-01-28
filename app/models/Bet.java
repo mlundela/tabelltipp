@@ -2,9 +2,9 @@ package models;
 
 import play.db.jpa.Model;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.annotation.Generated;
+import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 
