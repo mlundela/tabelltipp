@@ -7,10 +7,10 @@
 #{/ifErrors}
 
 
-#{form @Application.createBet()}
+#{form @Bets.save()}
 
 <div id="tabell" class="span-6">
-    <ol id="sortable">
+    <ul class="sortable">
         <li class="ui-state-default" id="${bet.p1.id}">${bet.p1.name}<input type="hidden" id="bet_p1" name="bet.p1.id" value="${bet.p1.id}"/></li>
         <li class="ui-state-default" id="${bet.p2.id}">${bet.p2.name}<input type="hidden" id="bet_p2" name="bet.p2.id" value="${bet.p2.id}"/></li>
         <li class="ui-state-default" id="${bet.p3.id}">${bet.p3.name}<input type="hidden" id="bet_p3" name="bet.p3.id" value="${bet.p3.id}"/></li>
@@ -27,12 +27,12 @@
         <li class="ui-state-default" id="${bet.p14.id}">${bet.p14.name}<input type="hidden" id="bet_p14" name="bet.p14.id" value="${bet.p14.id}"/></li>
         <li class="ui-state-default" id="${bet.p15.id}">${bet.p15.name}<input type="hidden" id="bet_p15" name="bet.p15.id" value="${bet.p15.id}"/></li>
         <li class="ui-state-default" id="${bet.p16.id}">${bet.p16.name}<input type="hidden" id="bet_p16" name="bet.p16.id" value="${bet.p16.id}"/></li>
-    </ol>
+    </ul>
 </div>
 
-<div class="span-18 last">
+<div class="span-6 last">
 
-    Ditt navn <br/>
+    Navn <br/>
     <input type="text" name="bet.user.name" value="${bet.user.name}"/>
     <br/>
     Epost <br/>
