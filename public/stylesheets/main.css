@@ -20,3 +20,12 @@ input[type=text] {
 body {
     background-color: #fafafa;
 }
+
+tr.active td {
+    background-color: #ccffcc;
+}
+
+a {
+    text-decoration: none;
+    color: #339900;
+}
