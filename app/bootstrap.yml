@@ -49,8 +49,8 @@ Team(ålesund):
 
 Bet(t1):
   user:
-    name: Mads
-    email: mlu@gmail.com
+    name: Test1
+    email: test1@gmail.com
   p1: brann
   p2: start
   p3: haugesund
@@ -70,8 +70,8 @@ Bet(t1):
 
 Bet(t2):
   user:
-    name: Nhat
-    email: nhat@gmail.com
+    name: Test2
+    email: test2@gmail.com
   p1: start
   p2: brann
   p3: lillestrøm
@@ -91,8 +91,8 @@ Bet(t2):
 
 Bet(t3):
   user:
-    name: Henning
-    email: hlo@gmail.com
+    name: Test3
+    email: test3@gmail.com
   p1: brann
   p2: start
   p3: haugesund
