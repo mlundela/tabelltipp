@@ -1,7 +1,12 @@
 #{extends 'main.html' /}
 #{set title:'Tabelltipp' /}
 
-<h2>Mitt tips</h2>
+<h3>${user.name}</h3>
+<h4>${user.email}</h4>
+
+#{if user.bet}
+
+<h3>Mitt tips</h3>
 
 <div class="span-6">
     <ol>
@@ -26,3 +31,8 @@
     <a href="/bets" class="btn">Endre tips</a>
 </div>
 
+#{/if}
+#{else}
+<a href="/bets" class="btn">Registrer dine tips!</a>
+
+#{/else}

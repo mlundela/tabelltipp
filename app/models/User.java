@@ -1,27 +1,29 @@
 package models;
 
-import net.sf.oval.constraint.NotEmpty;
 import play.data.validation.Email;
+import play.data.validation.MinSize;
+import play.data.validation.Required;
 import play.data.validation.Unique;
 import play.db.jpa.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.validation.constraints.NotNull;
 
 
 @Entity(name = "usr")
 public class User extends Model implements Comparable<User> {
 
-  @NotEmpty
+  @Required(message = "Navn ikke oppgitt.")
+  @MinSize(value = 2, message = "Navn for kort.")
   public String name;
 
-  @NotEmpty
-  @Column(unique = true)
-  @Email
+  @Required(message = "Epost ikke oppgitt.")
+  @Email(message = "Ugyldig epost.")
+  @Unique(message = "Det er allerede registrert en bruker på denne epost-adressen.")
   public String email;
 
-  @NotNull
+  @Required(message = "Passord ikke oppgitt.")
+  @MinSize(value = 4, message = "Passord må bestå av minst 4 tegn.")
   public String password;
 
   public Bet getBet() {

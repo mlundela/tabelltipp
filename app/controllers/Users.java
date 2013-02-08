@@ -1,6 +1,7 @@
 package controllers;
 
 import models.User;
+import play.data.validation.Valid;
 import play.mvc.Controller;
 import play.mvc.With;
 
@@ -8,7 +9,7 @@ import play.mvc.With;
 public class Users extends Controller {
 
   public static void profile() {
-    User user = User.find("byEmail", Security.connected()).first();
+    User user = Security.getConnectedUser();
     render(user);
   }
 
