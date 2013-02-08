@@ -1,0 +1,33 @@
+#{extends 'main.html' /}
+#{set title:'Logg inn' /}
+
+<div id="login">
+
+    #{form @authenticate(), class:'form-signin'}
+
+    #{if flash.error}
+    <p class="error">
+        &{flash.error}
+    </p>
+    #{/if}
+    #{if flash.success}
+    <p class="success">
+        &{flash.success}
+    </p>
+    #{/if}
+
+    <h2 class="form-signin-heading">Logg inn</h2>
+
+    <p>
+        <small>En ny konto vil bli opprettet for deg hvis du ikke er registrert fra før.</small>
+    </p>
+    <input type="text" name="username" id="username" class="input-block-level" placeholder="Epost-adresse" value="${flash.username}">
+    <input type="password" name="password" id="password" value="" class="input-block-level" placeholder="Passord">
+    <label class="checkbox">
+        <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} /> Husk meg
+    </label>
+    <button class="btn btn-large btn-primary" id="signin" type="submit">Logg inn</button>
+
+
+    #{/form}
+</div>
