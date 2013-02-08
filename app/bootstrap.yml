@@ -118,3 +118,10 @@ Bet(t3):
   p15: ålesund
   p16: hønefoss
 
+Group(gr1):
+  name: dnb
+  members: [u1, u2, u3]
+
+Group(gr2):
+  name: brann
+  members: [u1, u3]

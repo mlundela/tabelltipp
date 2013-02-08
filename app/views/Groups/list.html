@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Grupper' /}
+
+<h2>Grupper</h2>
+
+<table class="table">
+    #{list groups}
+    <tr>
+        <td>${_.name}</td>
+        <td>${_.members.size()}</td>
+        <td><a href="/groups/${_.id}">Vis</a></td>
+    </tr>
+    #{/list}
+</table>

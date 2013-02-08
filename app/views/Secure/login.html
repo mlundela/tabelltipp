@@ -1,4 +1,4 @@
-#{extends 'main.html' /}
+#{extends 'simple.html' /}
 #{set title:'Logg inn' /}
 
 <br/>
@@ -8,8 +8,8 @@
     #{form @authenticate(), class:'form-signin'}
 
     #{if flash.error}
-    <p class="error">
-        &{flash.error}
+    <p class="text-warning">
+        ${flash.login}
     </p>
     #{/if}
     #{if flash.success}

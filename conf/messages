@@ -1,0 +1,6 @@
+secure.username=Brukernavn:
+secure.password=Passord:
+secure.remember=Husk meg
+secure.signin=Logg inn
+secure.error=Ugyldig passord (må være minst 4 tegn)
+secure.logout=Du ble logget ut

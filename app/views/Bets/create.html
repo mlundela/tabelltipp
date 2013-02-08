@@ -8,11 +8,6 @@
 
 
 #{form @Bets.save()}
-
-<input type="submit" class="btn btn-large btn-success" value="Lagre"/>
-
-<br/>
-
 <div id="tabell">
     <ul class="sortable">
         <li class="ui-state-default" id="${bet.p1.id}">${bet.p1.name}<input type="hidden" id="bet_p1" name="bet.p1.id" value="${bet.p1.id}"/></li>
@@ -32,6 +27,10 @@
         <li class="ui-state-default" id="${bet.p15.id}">${bet.p15.name}<input type="hidden" id="bet_p15" name="bet.p15.id" value="${bet.p15.id}"/></li>
         <li class="ui-state-default" id="${bet.p16.id}">${bet.p16.name}<input type="hidden" id="bet_p16" name="bet.p16.id" value="${bet.p16.id}"/></li>
     </ul>
+
+    <br/>
+
+    <input type="submit" class="btn" value="Lagre"/>
 </div>
 
 #{/form}

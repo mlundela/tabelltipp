@@ -24,6 +24,10 @@ public class User extends Model implements Comparable<User> {
   @NotNull
   public String password;
 
+  public Bet getBet() {
+    return Bet.find("user = ? order by id desc", this).first();
+  }
+
 //  public Bruker(String name) {
 //    this.name = name;
 //  }

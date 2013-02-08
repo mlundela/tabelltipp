@@ -1,0 +1,13 @@
+#{extends 'main.html' /}
+#{set title:'Tabelltipp' /}
+
+<h2>${group.name}</h2>
+
+<table class="table">
+    #{list group.members}
+    <tr>
+        <td>${_.name}</td>
+        <td>${_.email}</td>
+    </tr>
+    #{/list}
+</table>
