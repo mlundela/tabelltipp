@@ -2,7 +2,6 @@ package controllers;
 
 import models.Bet;
 import models.User;
-import play.data.validation.Valid;
 import play.mvc.Before;
 import play.mvc.Controller;
 import play.mvc.With;
