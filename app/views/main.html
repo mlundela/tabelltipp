@@ -10,8 +10,8 @@
     <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
     #{get 'moreStyles' /}
     <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-    <script src="@{'/public/javascripts/jquery-1.7.1.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-    <script src="@{'/public/javascripts/jquery-ui-1.8.18.custom.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    <script src="@{'/public/javascripts/jquery-1.9.1.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    <script src="@{'/public/javascripts/jquery-ui-1.10.0.custom.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     <script src="@{'/public/javascripts/jquery.ui.touch-punch.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     <script src="@{'/public/bootstrap/js/bootstrap.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     <script src="@{'/public/javascripts/tipp.js'}" type="text/javascript" charset="${_response_encoding}"></script>
@@ -28,12 +28,12 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="brand" href="#">Tabelltipp</a>
-
-            <div class="nav-collapse collapse">
+            <div class="nav-collapse collapse pull-right">
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    #{if connectedUser}
+                    <li><a class="active" href="/profile">${connectedUser.email}</a></li>
+                    <li><a href="/logout">Logg ut</a></li>
+                    #{/if}
                 </ul>
             </div>
             <!--/.nav-collapse -->

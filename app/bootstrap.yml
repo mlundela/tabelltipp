@@ -46,11 +46,23 @@ Team(vålerenga):
 Team(ålesund):
   name: Aalesund
 
-
-Bet(t1):
-  user:
+User(u1):
     name: Test1
     email: test1@gmail.com
+    password: 1234
+
+User(u2):
+    name: Test2
+    email: test2@gmail.com
+    password: 1234
+
+User(u3):
+    name: Test3
+    email: test3@gmail.com
+    password: 1234
+
+Bet(t1):
+  user: u1
   p1: brann
   p2: start
   p3: haugesund
@@ -69,9 +81,7 @@ Bet(t1):
   p16: hønefoss
 
 Bet(t2):
-  user:
-    name: Test2
-    email: test2@gmail.com
+  user: u2
   p1: start
   p2: brann
   p3: lillestrøm
@@ -90,9 +100,7 @@ Bet(t2):
   p16: hønefoss
 
 Bet(t3):
-  user:
-    name: Test3
-    email: test3@gmail.com
+  user: u3
   p1: brann
   p2: start
   p3: haugesund

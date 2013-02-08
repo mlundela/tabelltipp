@@ -7,6 +7,7 @@ import play.db.jpa.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
 
 
 @Entity(name = "usr")
@@ -19,6 +20,9 @@ public class User extends Model implements Comparable<User> {
   @Column(unique = true)
   @Email
   public String email;
+
+  @NotNull
+  public String password;
 
 //  public Bruker(String name) {
 //    this.name = name;
@@ -58,5 +62,9 @@ public class User extends Model implements Comparable<User> {
 
   public int compareTo(User user) {
     return user.getScore() - this.getScore();
+  }
+
+  public static User findByEmail(String email) {
+    return User.find("email = ?", email).first();
   }
 }

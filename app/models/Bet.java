@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 public class Bet extends Model {
 
-  @ManyToOne(cascade = CascadeType.PERSIST)
+  @ManyToOne
   public User user;
 
   @ManyToOne public Team p1;
@@ -50,6 +50,5 @@ public class Bet extends Model {
     p14 = teams.get(13);
     p15 = teams.get(14);
     p16 = teams.get(15);
-    user = new User();
   }
 }

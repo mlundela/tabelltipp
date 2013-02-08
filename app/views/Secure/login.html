@@ -1,6 +1,8 @@
 #{extends 'main.html' /}
 #{set title:'Logg inn' /}
 
+<br/>
+<br/>
 <div id="login">
 
     #{form @authenticate(), class:'form-signin'}
@@ -17,6 +19,7 @@
     #{/if}
 
     <h2 class="form-signin-heading">Logg inn</h2>
+
     <p>
         <small>En ny konto vil bli opprettet for deg hvis du ikke er registrert fra før.</small>
     </p>
