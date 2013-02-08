@@ -1,13 +1,13 @@
-#tabell > ul {
+ul.sortable {
     list-style-type: none;
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
 }
 
-#tabell ul li {
+ul.sortable li {
     margin: 5px;
-    padding: 5px;
+    padding: 8px;
     width: 150px;
     cursor: pointer;
 }
