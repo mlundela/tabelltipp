@@ -3,7 +3,13 @@
 
 <h2>${group.name}</h2>
 
-<table class="table">
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Navn</th>
+        <th>Epost</th>
+    </tr>
+    </thead>
     #{list group.members}
     <tr>
         <td>${_.name}</td>
@@ -11,3 +17,9 @@
     </tr>
     #{/list}
 </table>
+#{if !isMember}
+#{form @join()}
+<input type="hidden" name="groupId" value="${group.id}">
+<button class="btn btn-primary" id="signin" type="submit">Bli med i gruppen!</button>
+#{/form}
+#{/if}

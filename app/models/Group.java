@@ -5,8 +5,8 @@ import play.db.jpa.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity(name = "grp")
@@ -16,7 +16,7 @@ public class Group extends Model {
   public String name;
 
   @ManyToMany
-  public List<User> members = new ArrayList<User>();
+  public Set<User> members = new HashSet<User>();
 
   public Group(String name) {
     this.name = name;

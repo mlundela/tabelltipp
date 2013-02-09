@@ -8,6 +8,10 @@ import play.db.jpa.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 @Entity(name = "usr")
@@ -26,9 +30,16 @@ public class User extends Model implements Comparable<User> {
   @MinSize(value = 4, message = "Passord må bestå av minst 4 tegn.")
   public String password;
 
+  @ManyToMany(mappedBy = "members")
+  public Set<Group> groups = new HashSet<Group>();
+
   public Bet getBet() {
     return Bet.find("user = ? order by id desc", this).first();
   }
+
+//  public List<Group> getGroups() {
+//    return Group.find("members contains ?", this).fetch();
+//  }
 
 //  public Bruker(String name) {
 //    this.name = name;

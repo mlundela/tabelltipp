@@ -1,0 +1,12 @@
+#{extends 'simple.html' /}
+#{set title:'Registrering' /}
+
+<br/>
+<br/>
+<div id="login">
+    #{form @save(), class:'form-signin'}
+    <h2 class="form-signin-heading">Opprett liga</h2>
+    <input type="text" name="name" id="name" class="input-block-level" placeholder="Navn" value="">
+    <button class="btn btn-large btn-primary" id="signin" type="submit">Gå videre</button>
+    #{/form}
+</div>

@@ -1,9 +1,16 @@
 #{extends 'main.html' /}
 #{set title:'Grupper' /}
 
-<h2>Grupper</h2>
+<h2>Alle ligaer</h2>
 
-<table class="table">
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Navn på liga</th>
+        <th>Antall deltagere</th>
+        <th></th>
+    </tr>
+    </thead>
     #{list groups}
     <tr>
         <td>${_.name}</td>
