@@ -7,6 +7,8 @@
     </div>
 </div>
 
+#{if user.bet}
+
 <div class="row">
 
     <div class="span4">
@@ -33,7 +35,6 @@
     </div>
 
     <div class="span-4">
-        #{if user.bet}
         <h3>Mitt tips</h3>
         <ol>
             <li>${user.bet.p1.name}</li>
@@ -56,9 +57,9 @@
 
         <a href="/bets" class="btn">Endre tips</a>
         #{/if}
-
-        #{else}
-        <a href="/bets" class="btn">Registrer dine tips!</a>
-        #{/else}
     </div>
 </div>
+
+#{else}
+<a href="/bets" class="btn">Registrer dine tips!</a>
+#{/else}

@@ -12,11 +12,6 @@ ul.sortable li {
     cursor: pointer;
 }
 
-input[type=text] {
-    height: 22px;
-    width: 200px;
-}
-
 body {
     background-color: #fafafa;
 }
@@ -44,6 +39,6 @@ body {
   height: auto;
   margin-bottom: 15px;
   padding: 7px 9px;
-  width: 250px;
+  width: 90%;
 }
 
