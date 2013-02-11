@@ -43,15 +43,13 @@
             <th>${selectedUser.name}</th>
             <th>Lag</th>
             <th>Poeng</th>
-            <th>Trekk</th>
         </tr>
         </thead>
         #{list table}
         <tr>
             <td>${selectedUser.bet.asList.get(_index - 1).name}</td>
             <td>${_.name}</td>
-            <td>${_.points}</td>
-            <td>${Math.abs(selectedUser.bet.asList.get(_index - 1).points - _.points)}*</td>
+            <td>${_.points}/${Math.abs(selectedUser.bet.asList.get(_index - 1).points - _.points)}*</td>
         </tr>
         #{/list}
     </table>
