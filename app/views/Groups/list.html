@@ -8,14 +8,12 @@
     <tr>
         <th>Navn på liga</th>
         <th>Antall deltagere</th>
-        <th></th>
     </tr>
     </thead>
     #{list groups}
     <tr>
-        <td>${_.name}</td>
+        <td><a href="/groups/${_.id}">${_.name}</a></td>
         <td>${_.members.size()}</td>
-        <td><a href="/groups/${_.id}">Vis</a></td>
     </tr>
     #{/list}
 </table>

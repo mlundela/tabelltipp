@@ -1,25 +1,61 @@
 #{extends 'main.html' /}
 #{set title:'Tabelltipp' /}
 
-<h2>${group.name}</h2>
+<div class="span4">
 
-<table class="table table-bordered">
-    <thead>
-    <tr>
-        <th>Navn</th>
-        <th>Epost</th>
-    </tr>
-    </thead>
-    #{list group.members}
-    <tr>
-        <td>${_.name}</td>
-        <td>${_.email}</td>
-    </tr>
-    #{/list}
-</table>
-#{if !isMember}
-#{form @join()}
-<input type="hidden" name="groupId" value="${group.id}">
-<button class="btn btn-primary" id="signin" type="submit">Bli med i gruppen!</button>
-#{/form}
-#{/if}
+    <h2>${group.name}</h2>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th colspan="2">Poengstilling</th>
+        </tr>
+        <tr>
+            <th>Navn</th>
+            <th>Poeng</th>
+        </tr>
+        </thead>
+        #{list group.membersSorted}
+        <tr class="${selectedUser.equals(_) ? 'success' : ''}">
+            <td><a href="/groups/${group.id}?selectedId=${_.id}">${_.name}</a></td>
+            <td>${_.score}</td>
+        </tr>
+        #{/list}
+    </table>
+    #{if !isMember}
+    #{form @join()}
+    <input type="hidden" name="groupId" value="${group.id}">
+    <button class="btn btn-primary" id="signin" type="submit">Bli med i gruppen!</button>
+    #{/form}
+    #{/if}
+
+</div>
+
+<div class="span5">
+
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th colspan="4">Tabell</th>
+        </tr>
+        <tr>
+            <th>${selectedUser.name}</th>
+            <th>Lag</th>
+            <th>Poeng</th>
+            <th>Trekk</th>
+        </tr>
+        </thead>
+        #{list table}
+        <tr>
+            <td>${selectedUser.bet.asList.get(_index - 1).name}</td>
+            <td>${_.name}</td>
+            <td>${_.points}</td>
+            <td>${Math.abs(selectedUser.bet.asList.get(_index - 1).points - _.points)}*</td>
+        </tr>
+        #{/list}
+    </table>
+
+
+    <p class="small">* Poengsum = 100 - (trekk / 2)</p>
+</div>

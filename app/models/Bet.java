@@ -4,6 +4,7 @@ import play.db.jpa.Model;
 
 import javax.annotation.Generated;
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -50,5 +51,26 @@ public class Bet extends Model {
     p14 = teams.get(13);
     p15 = teams.get(14);
     p16 = teams.get(15);
+  }
+
+  public List<Team> getAsList() {
+    List<Team> out = new ArrayList<Team>();
+    out.add(p1);
+    out.add(p2);
+    out.add(p3);
+    out.add(p4);
+    out.add(p5);
+    out.add(p6);
+    out.add(p7);
+    out.add(p8);
+    out.add(p9);
+    out.add(p10);
+    out.add(p11);
+    out.add(p12);
+    out.add(p13);
+    out.add(p14);
+    out.add(p15);
+    out.add(p16);
+    return out;
   }
 }

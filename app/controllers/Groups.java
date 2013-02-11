@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Group;
+import models.Team;
 import models.User;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -18,14 +19,22 @@ public class Groups extends Controller {
     Group group = new Group(name);
     group.members.add(Security.getConnectedUser());
     group.save();
-    show(group.id);
+    show(group.id, null);
   }
 
-  public static void show(Long id) {
+  public static void show(Long id, Long selectedId) {
     Group group = Group.findById(id);
     User user = Security.getConnectedUser();
     boolean isMember = group.members.contains(user);
-    render(group, isMember);
+    List<Team> table = Team.getTable();
+    User selectedUser;
+    if (selectedId == null && !group.members.isEmpty()) {
+      selectedUser = group.getMembersSorted().get(0);
+    }
+    else {
+      selectedUser = User.findById(selectedId);
+    }
+    render(group, isMember, table, selectedUser);
   }
 
   public static void list() {
@@ -40,6 +49,6 @@ public class Groups extends Controller {
       group.members.add(user);
       group.save();
     }
-    show(groupId);
+    show(groupId, null);
   }
 }
