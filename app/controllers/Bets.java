@@ -21,9 +21,4 @@ public class Bets extends Controller {
     bet.validateAndSave();
     Users.profile();
   }
-
-  public static void show(Long id) {
-    Bet bet = Bet.findById(id);
-    render(bet);
-  }
 }

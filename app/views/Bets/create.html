@@ -2,8 +2,9 @@
 #{set title:'Tabelltipp' /}
 
 
-#{form @Bets.save()}
-<div id="tabell" class="span2">
+<div id="tabell" class="span3">
+
+    #{form @Bets.save()}
     <ul class="sortable">
         <li class="btn" id="${bet.p1.id}">${bet.p1.name}<input type="hidden" id="bet_p1" name="bet.p1.id" value="${bet.p1.id}"/></li>
         <li class="btn" id="${bet.p2.id}">${bet.p2.name}<input type="hidden" id="bet_p2" name="bet.p2.id" value="${bet.p2.id}"/></li>
@@ -26,6 +27,25 @@
     <br/>
 
     <input type="submit" class="btn btn-primary btn-large" value="Lagre"/>
+    #{/form}
+
 </div>
 
-#{/form}
+<div class="span3">
+    <h4>Regler</h4>
+
+    <p>
+        Reglene er enkle. Tipper du riktig tabell får du 100 poeng. For hver posisjon du gjetter feil, beregnes et poengtrekk.
+    </p>
+
+    <p>
+        Formelen for poengtrekk bruker poengdifferansen til det laget du har tippet for en gitt posisjon og poengsummen til det laget
+        som innehar den gitte posisjonen.
+    </p>
+    <p>
+        Har du f.eks tippet <i>Brann</i> på førsteplass, men der ligger <i>Sogndal</i> med <i>4</i> poeng mer enn bra, da får du 4 poeng i trekk for førsteplassen, osv.
+    </p>
+    <p>
+        Din totale poengsum beregnes slik: <br/> <i>sum = 100 - (poengtrekk / 2)</i>
+    </p>
+</div>
