@@ -3,10 +3,11 @@
 <html>
 <head>
     <title>#{get 'title' /}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta charset="${_response_encoding}">
-    <link rel="apple-touch-icon" href="/public/images/logo.jpeg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon" href="/public/images/logo.png"/>
     <link rel="stylesheet" media="screen" href="@{'/public/bootstrap/css/bootstrap.min.css'}">
     <link rel="stylesheet" media="screen" href="@{'/public/bootstrap/css/bootstrap-responsive.min.css'}">
     <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
@@ -30,6 +31,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="brand" href="#">Tabelltipp</a>
+
             <div class="nav-collapse collapse pull-right">
                 <ul class="nav">
                     <li><a href="/login">Logg inn</a></li>
