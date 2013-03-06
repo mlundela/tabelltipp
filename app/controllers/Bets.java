@@ -11,7 +11,7 @@ public class Bets extends Controller {
     Bet bet = Bet.find("user = ? order by id desc", Security.getConnectedUser()).first();
     if (bet == null) {
       bet = new Bet();
-      bet.init();
+      bet.randomize();
     }
     render(bet);
   }

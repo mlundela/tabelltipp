@@ -30,30 +30,34 @@
             #{/list}
         </table>
 
-        <a href="/groups" class="btn">Finn en liga!</a>
-        <a href="/groups/create" class="btn btn-primary">Lag en liga!</a>
+        <a href="/groups" class="btn">Finn en liga</a>
+        <a href="/groups/create" class="btn btn-primary">Opprett liga</a>
     </div>
 
     <div class="span-4">
-        <h3>Mitt tips</h3>
-        <ol>
-            <li>${user.bet.p1.name}</li>
-            <li>${user.bet.p2.name}</li>
-            <li>${user.bet.p3.name}</li>
-            <li>${user.bet.p4.name}</li>
-            <li>${user.bet.p5.name}</li>
-            <li>${user.bet.p6.name}</li>
-            <li>${user.bet.p7.name}</li>
-            <li>${user.bet.p8.name}</li>
-            <li>${user.bet.p9.name}</li>
-            <li>${user.bet.p10.name}</li>
-            <li>${user.bet.p11.name}</li>
-            <li>${user.bet.p12.name}</li>
-            <li>${user.bet.p13.name}</li>
-            <li>${user.bet.p14.name}</li>
-            <li>${user.bet.p15.name}</li>
-            <li>${user.bet.p16.name}</li>
-        </ol>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th colspan="2">Mitt tips</th>
+            </tr>
+            </thead>
+            <tr><td>1</td><td>${user.bet.p1.name}</td></tr>
+            <tr><td>2</td><td>${user.bet.p2.name}</td></tr>
+            <tr><td>3</td><td>${user.bet.p3.name}</td></tr>
+            <tr><td>4</td><td>${user.bet.p4.name}</td></tr>
+            <tr><td>5</td><td>${user.bet.p5.name}</td></tr>
+            <tr><td>6</td><td>${user.bet.p6.name}</td></tr>
+            <tr><td>7</td><td>${user.bet.p7.name}</td></tr>
+            <tr><td>8</td><td>${user.bet.p8.name}</td></tr>
+            <tr><td>9</td><td>${user.bet.p9.name}</td></tr>
+            <tr><td>10</td><td>${user.bet.p10.name}</td></tr>
+            <tr><td>11</td><td>${user.bet.p11.name}</td></tr>
+            <tr><td>12</td><td>${user.bet.p12.name}</td></tr>
+            <tr><td>13</td><td>${user.bet.p13.name}</td></tr>
+            <tr><td>14</td><td>${user.bet.p14.name}</td></tr>
+            <tr><td>15</td><td>${user.bet.p15.name}</td></tr>
+            <tr><td>16</td><td>${user.bet.p16.name}</td></tr>
+        </table>
 
         <a href="/bets" class="btn">Endre tips</a>
         #{/if}

@@ -5,6 +5,7 @@ import play.db.jpa.Model;
 import javax.annotation.Generated;
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -33,8 +34,9 @@ public class Bet extends Model {
   @ManyToOne public Team p16;
 
 
-  public void init() {
+  public void randomize() {
     List<Team> teams = Team.findAll();
+    Collections.shuffle(teams);
     p1 = teams.get(0);
     p2 = teams.get(1);
     p3 = teams.get(2);
