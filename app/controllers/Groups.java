@@ -22,17 +22,17 @@ public class Groups extends Controller {
     show(group.id, null);
   }
 
-  public static void show(Long id, Long selectedId) {
+  public static void show(Long id, Long userId) {
     Group group = Group.findById(id);
     User user = Security.getConnectedUser();
     boolean isMember = group.members.contains(user);
     List<Team> table = Team.getTable();
     User selectedUser;
-    if (selectedId == null && !group.members.isEmpty()) {
+    if (userId == null && !group.members.isEmpty()) {
       selectedUser = group.getMembersSorted().get(0);
     }
     else {
-      selectedUser = User.findById(selectedId);
+      selectedUser = User.findById(userId);
     }
     render(group, isMember, table, selectedUser);
   }

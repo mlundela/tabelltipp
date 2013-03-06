@@ -17,7 +17,7 @@
         </thead>
         #{list group.membersSorted}
         <tr class="${selectedUser.equals(_) ? 'success' : ''}">
-            <td><a href="/groups/${group.id}?selectedId=${_.id}">${_.name}</a></td>
+            <td><a href="/groups/${group.id}?userId=${_.id}">${_.name}</a></td>
             <td>${_.score}</td>
         </tr>
         #{/list}

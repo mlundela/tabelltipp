@@ -4,8 +4,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import play.Logger;
 import play.jobs.Job;
+import play.jobs.On;
+import models.Team;
 
-//@On("0 */5 12-20 * * ?")
+@On("0 */5 12-20 * * ?")
 public class OppdaterTabell extends Job {
 
   public void doJob() throws Exception {
@@ -13,7 +15,6 @@ public class OppdaterTabell extends Job {
     Logger.info("OPPDATERER TABELL");
     Document doc = Jsoup.connect("http://www.altomfotball.no/element.do?cmd=tournamentTable&tournamentId=1").get();
     Elements elements = doc.select(".sd_table_team a");
-//    int i = 1;
 
     for (Element element : elements) {
       String points = element.parent().parent().select(".sd_table_points").text();
@@ -41,10 +42,9 @@ public class OppdaterTabell extends Job {
         case 541: name = "Sarpsborg 08"; break;
       }
 
-//      Lag lag = Lag.find("name = ?", name).first();
-//      Poeng poeng = Poeng.find("runde = ? and lag.name = ?", runde, name).first();
-//      poeng.poeng = Integer.valueOf(points);
-//      poeng.save();
+      Team team = Team.find("name = ?", name).first();
+      team.points = Integer.valueOf(points);
+      team.save();
 
       Logger.info(name + " har " + points + " poeng");
     }
