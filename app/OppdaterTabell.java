@@ -7,7 +7,7 @@ import play.jobs.Job;
 import play.jobs.On;
 import models.Team;
 
-@On("0 */5 12-20 * * ?")
+//@On("0 */5 12-20 * * ?")
 public class OppdaterTabell extends Job {
 
   public void doJob() throws Exception {
