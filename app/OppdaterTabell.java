@@ -5,8 +5,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import play.Logger;
 import play.jobs.Job;
+import play.jobs.On;
 
-//@On("0 */5 12-20 * * ?")
+@On("0 */5 12-20 * * ?")
 public class OppdaterTabell extends Job {
 
   public void doJob() throws Exception {
