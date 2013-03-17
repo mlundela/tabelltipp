@@ -3,13 +3,11 @@
 # ~~~~
 
 # Home page
-GET     /                                         Application.register
-GET     /profile                                  Users.profile
+GET     /                                         Users.profile
 GET     /bets                                     Bets.create
-POST    /bets                                     Bets.save
 GET     /groups                                   Groups.list
 POST    /groups                                   Groups.save
-GET     /groups/{<[0-9]+>id}                      Groups.show
+GET     /groups/{<[0-9]+>id}                      Application.showGroup
 
 *       /                                         module:secure
 
